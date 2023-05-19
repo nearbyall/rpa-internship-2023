@@ -13,7 +13,7 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Admin_weekends")
+@Table(name = "weekends")
 public class Weekend {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
