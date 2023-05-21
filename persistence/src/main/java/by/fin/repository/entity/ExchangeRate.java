@@ -25,6 +25,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ExchangeRate {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
