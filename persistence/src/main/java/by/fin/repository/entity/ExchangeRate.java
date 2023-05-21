@@ -7,7 +7,6 @@ import jakarta.persistence.Id;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -35,4 +34,5 @@ public class ExchangeRate {
     private LocalDateTime date;
 
     private BigDecimal rate;
+
 }

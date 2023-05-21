@@ -23,6 +23,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Table(name = "weekends")
 public class Weekend {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "weekend_id")
@@ -33,4 +34,5 @@ public class Weekend {
 
     @Column(name = "is_day_off")
     private boolean isDayOff;
+
 }

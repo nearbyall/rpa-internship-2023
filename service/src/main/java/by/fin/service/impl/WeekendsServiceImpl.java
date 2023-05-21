@@ -1,7 +1,6 @@
 package by.fin.service.impl;
 
 import by.fin.repository.WeekendRepository;
-import by.fin.repository.entity.Weekend;
 import by.fin.service.WeekendService;
 import by.fin.service.dto.WeekendDTO;
 import lombok.RequiredArgsConstructor;
