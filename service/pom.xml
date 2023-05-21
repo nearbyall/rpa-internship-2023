@@ -7,17 +7,18 @@
         <groupId>by.fin</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>service</artifactId>
     <dependencies>
         <dependency>
             <groupId>by.fin</groupId>
-            <artifactId>module</artifactId>
+            <artifactId>persistence</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>service</artifactId>
+
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>

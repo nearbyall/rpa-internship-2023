@@ -1,9 +1,12 @@
 package by.fin.service;
 
-import by.fin.module.entity.Weekend;
+import by.fin.repository.entity.Weekend;
+import by.fin.service.dto.WeekendDTO;
 
 import java.util.List;
 
 public interface WeekendService {
-    List<Weekend> findAll();
+
+    List<WeekendDTO> findAll();
+
 }

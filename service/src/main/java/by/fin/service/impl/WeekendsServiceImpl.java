@@ -1,22 +1,33 @@
 package by.fin.service.impl;
 
-import by.fin.module.WeekendsRepository;
-import by.fin.module.entity.Weekend;
+import by.fin.repository.WeekendRepository;
+import by.fin.repository.entity.Weekend;
 import by.fin.service.WeekendService;
+import by.fin.service.dto.WeekendDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
 @RequiredArgsConstructor
 public class WeekendsServiceImpl implements WeekendService {
-   private final WeekendsRepository weekendsRepository;
+
+    private final WeekendRepository weekendRepository;
 
     @Override
-    public List<Weekend> findAll() {
-       return weekendsRepository.findAll();
+    public List<WeekendDTO> findAll() {
+        return weekendRepository.findAll().stream()
+                .map(weekend -> {
+                    WeekendDTO dto = new WeekendDTO();
+                    dto.setCalendarDate(weekend.getCalendarDate());
+                    dto.setDayOff(weekend.isDayOff());
+                    return dto;
+                })
+                .collect(Collectors.toList());
     }
+
 }
