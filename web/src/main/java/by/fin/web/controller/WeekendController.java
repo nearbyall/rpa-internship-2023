@@ -26,7 +26,7 @@ import java.util.List;
  *
  * @see by.fin.service.WeekendService
  */
-@RequestMapping("api/weekends")
+@RequestMapping("/api/weekends")
 @RestController
 @RequiredArgsConstructor
 public class WeekendController {
